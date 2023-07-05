@@ -26,7 +26,7 @@ dummy = np.zeros((Nx, Ny, Nz))
 lap_dummy = np.random.rand(Nx, Ny, Nz)
 c = np.empty((int(nstep/nprint)+1,Nx, Ny, Nz), dtype=np.float32)
 ci = 0
-# Evolve
+# Evolve to solve Cahn hilliard equation
 def lap_(con):
 	return (np.roll(con, 1, axis=0) + np.roll(con, -1, axis=0) + np.roll(con, 1, axis=1) + np.roll(con, -1, axis=1) + np.roll(con, 1, axis=2) + np.roll(con, -1, axis=2) - 6 * con) / (dx*dx)
 for istep in range(nstep):
@@ -99,7 +99,7 @@ for i in range(Nx):
                         fw.write('\t{}\t1\t{:.2f}\t{:.2f}\t{:.2f}\n'.format(id2+m+1,pos[m][0],pos[m][1],pos[m][2]))
 print(f'countA = {id1+2}')
 print(f'countB = {id2+2}')
-
+# generate gif
 from matplotlib import animation
 fig, ax = plt.subplots(1,1,figsize=(4,4))
 im = ax.imshow(c[0][-1],cmap='RdBu_r', vmin=0.0, vmax=1.0)
