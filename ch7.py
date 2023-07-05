@@ -41,7 +41,7 @@ for istep in range(nstep):
         print(f'done step: {istep+1}')
         print('Maximum concentration = ', np.max(con[5]))
         print('Minimum concentration = ', np.min(con[5]))
-        plt.imshow(con[Nx/2], cmap='bwr')
+        plt.imshow(con[Nx-1], cmap='bwr')
         plt.colorbar()
         plt.show()
 # generate lammps data file
