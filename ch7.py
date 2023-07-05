@@ -35,7 +35,6 @@ for istep in range(nstep):
     dfdcon=1.0*(2.0*con*(1-con)**2 -2.0*con**2*(1.0-con))
     #dfdcon=con**3 - con
     dummy = dfdcon-grad_coef*lap_con
-
     lap_dummy = lap_(dummy)
     # time integration:
     con += dtime*mobility*lap_dummy
