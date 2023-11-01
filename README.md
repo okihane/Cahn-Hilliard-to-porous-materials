@@ -2,10 +2,10 @@
 This program generate lammps models of porous materials by solving the Cahn Hilliard equation.
 
 
-### how to use?
+### How to use?
 
 
-download ch7.py and run
+download `ch7.py` and run
 ```
 python ch7.py
 ```
