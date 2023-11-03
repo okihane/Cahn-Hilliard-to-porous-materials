@@ -11,3 +11,4 @@ python ch7.py
 ```
 there are some settings in the `ch7.py` srcipt, such as the length paramaters `nx,ny,nz`, the iteration parameter `nstep`, and so on ...
 hhh
+aaa
